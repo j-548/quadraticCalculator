@@ -1,0 +1,74 @@
+<!--
+  Assignment: Week 3 lab
+  Author: Jeff Abbott
+  Date: 3/23/2022
+  Purpose: Quadratic equation calculator
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quadratic Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header">
+        <h1>Get the two solutions of a Quadratic Formula!</h1>
+      </div>
+
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a href="../" class="ui-btn-active ui-state-persist">
+              Calculator</a
+            >
+          </li>
+          <li>
+            <a href="information.html">More Information</a>
+          </li>
+        </ul>
+      </div>
+
+      <div data-role="main" class="ui-content">
+          <p>Quadratic Equation Calculator</p>
+          <p>*a cannot be 0</p>
+
+          <div>
+
+              <!-- input fields for coefficient equation-->
+              <input class="coefficient" type="type" id="coefA" value="" placeholder="a" /><span>x<sup>2</sup> + </span>
+              <input class="coefficient" type="type" id="coefB" value="" placeholder="b" /><span>x +</span>
+              <input class="coefficient" type="type" id="coefC" value="" placeholder="c" /><span>= 0</span>
+
+              <!--displays solutions-->
+            <div>
+                <label>Solution A:</label>
+                <p class="answer" id="answerA"></p>
+            </div>
+            <div>
+                <label>Solution B:</label>
+                <p class="answer" id="answerB"></p>
+            </div>
+
+
+              <button onclick="calculate()">Calculate</button>
+          </div>
+      </div>
+
+      <div data-role="footer">
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
